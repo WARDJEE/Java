@@ -13,8 +13,9 @@ public class Breads {
         this.nextNumber = 1000;
     }
 
-    public void addBread(Variety variety, LocalDate expirationDate){
-        breads[amount] = new Bread(nextNumber++, variety, expirationDate);
+    public int addBread(Variety variety, LocalDate expirationDate){
+        this.breads[this.amount] = new Bread(this.nextNumber++, variety, expirationDate);
+        return breads[amount++].getNumber();
     }
 
     public void printBreads(){
@@ -23,4 +24,12 @@ public class Breads {
         }
     }
 
+    public void printExpired(LocalDate date){
+        for (int i = 0; i < this.amount; i++) {
+            if(date.isAfter(this.breads[i].getExpirationDate())){
+                System.out.println(breads[i].toString());
+            }
+        }
+
+    }
 }

@@ -5,8 +5,8 @@ public enum Variety {
 
     public String toString(){
         return switch (this) {
-            case WHITE -> "Witte";
-            case BROWN -> "Bruine";
+            case WHITE -> "Wit";
+            case BROWN -> "Bruin";
         };
     }
 }
