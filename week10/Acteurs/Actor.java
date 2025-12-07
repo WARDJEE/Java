@@ -1,6 +1,5 @@
 package week10.Acteurs;
 
-import java.time.LocalDate;
 import java.util.Objects;
 
 public class Actor implements Comparable <Actor> {
