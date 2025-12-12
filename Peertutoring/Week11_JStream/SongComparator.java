@@ -9,5 +9,4 @@ public class SongComparator implements Comparator<Song> {
 
         return s1.getDuration()-s2.getDuration();
     }
-
 }
