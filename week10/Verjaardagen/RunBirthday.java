@@ -16,7 +16,7 @@ public class RunBirthday {
                 new Person("Jeremy",  new Birthday( 3, Month.AUGUSTUS)),
                 new Person("Divine",  new Birthday(10, Month.APRIL))
         };
-        List<Person> persons = new ArrayList<Person>(Arrays.asList(data));
+        List<Person> persons = new ArrayList<>(Arrays.asList(data));
         showPersons(persons);
 
         // Sorteer personen in volgorde van de kalender

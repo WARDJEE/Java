@@ -16,7 +16,6 @@ class TodoItem {
         int month = Integer.parseInt(parts[1]);
         int year = Integer.parseInt(parts[2]);
 
-
         if ((LocalDate.of(year, month, day)).isBefore(LocalDate.now())) {
             System.out.println("Fout: de deadline ligt voor vandaag!");
             this.deadline = LocalDate.now();
