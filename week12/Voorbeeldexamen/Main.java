@@ -3,6 +3,7 @@ package week12.Voorbeeldexamen;
 public class Main {
     public static void main() {
         //DEEL1:
+        System.out.println();
         System.out.println("DEEL 1: ATOMEN");
         NietMetaal h = new NietMetaal("Waterstof","H", 1, 1);
         h.setIsolerend(false);
@@ -24,11 +25,12 @@ public class Main {
         tabelMendeljev.printMetalen();
 
         //DEEL2:
+        System.out.println();
         System.out.println("DEEL 2: MOLECULES");
-    /*  Molecule water = new Molecule();
+      Molecule water = new Molecule();
         water.voegAtoomToe(h, 2);
         water.voegAtoomToe(o, 1);
-        System.out.println("Water:" + water);
+        System.out.println("Water: " + water);
         System.out.println("Massa van 1 molecule water: " + water.getMassa());
         Molecule glucose = new Molecule();
         glucose.voegAtoomToe(h, 12);
@@ -42,16 +44,17 @@ public class Main {
         System.out.println("Methaan: " + methaan);
         System.out.println("Massa van 1 molecule methaan: " + methaan.getMassa());
         methaan.voegAtoomToe(c, -10);
-     */
+
         //DEEL3:
-     /* System.out.println("DEEL 3: Reacties");
+        System.out.println();
+        System.out.println("DEEL 3: Reacties");
         Reactie reactie = new Reactie("Reactie van " + methaan + " en " + glucose, methaan, glucose);
         reactie.start();
         reactie.printVerslag();
         reactie = new Reactie("Reactie van restproduct van de glucose (" + glucose + ") met alle elementen", glucose, tabelMendeljev);
         reactie.start();
         reactie.printVerslag();
-      */
+
     }
 }
 

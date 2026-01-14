@@ -1,11 +1,12 @@
 package week12.Voorbeeldexamen;
 
+
 import java.util.*;
 
-public class TabelMendeljev {
+public class TabelMendeljev implements Reactant {
     private Set<Atoom> atomen;
 
-    public TabelMendeljev() {
+    public TabelMendeljev(){
         this.atomen = new HashSet<>();
     }
 
@@ -14,33 +15,43 @@ public class TabelMendeljev {
     }
 
     public void printMetalen(){
-        List<Metaal> list = new ArrayList<>();
-
-        for (Atoom atoom : this.atomen) {
+        List<Metaal> metalen = new ArrayList<>();
+        System.out.println("De metalen:");
+        for (Atoom atoom : atomen) {
             if (atoom instanceof Metaal){
-                list.add((Metaal) atoom);
+               metalen.add((Metaal) atoom);
             }
         }
-        Collections.sort(list, new CompareByGeleiding());
-
-        System.out.println("De metalen:");
-        for (Metaal metaal : list) {
+        metalen.sort(new CompareByGeleiding());
+        for (Metaal metaal : metalen) {
             System.out.println(metaal);
         }
 
     }
 
     public void print(){
-        List<Atoom> list = new ArrayList<>(this.atomen);
-
-        Collections.sort(list, new CompareByAtoomnummer());
-
+        List<Atoom> atomen = new ArrayList<>(this.atomen);
+        atomen.sort(new CompareByAtoomnummer());
         for (Atoom atoom : atomen) {
-            System.out.println(atoom);
+                System.out.println(atoom);
         }
     }
 
+    @Override
+    public boolean isLeeg() {
+        return false;
 
+    }
 
+    @Override
+    public Atoom genereerAtoom() {
+        if (this.atomen.isEmpty()) {
+            System.out.println("Geen atomen!");
+        }
 
+        Random random = new Random();
+        List<Atoom> atomen = new ArrayList<>(this.atomen);
+
+        return atomen.get(random.nextInt(atomen.size()));
+    }
 }
