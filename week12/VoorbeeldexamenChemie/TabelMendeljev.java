@@ -40,7 +40,6 @@ public class TabelMendeljev implements Reactant {
     @Override
     public boolean isLeeg() {
         return false;
-
     }
 
     @Override
